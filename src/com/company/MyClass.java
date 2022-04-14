@@ -34,12 +34,78 @@ public class MyClass
     }
 
 
+    //metodę pobierającą wartość przetrzymująca znak oraz wartość logiczną
+    //komentarz od mnie, nie wiem czy da się jedną metodą get zwracać dwa różne typy danych więc rozpisałem to na dwie metody
+    public char getZnak()
+    {
+        return this.znak1;
+    }
+
+    public boolean getLogiczna()
+    {
+        return this.logiczna1;
+    }
+
+    //metodę ustawiającą wartość pola rzeczywistego
+    public void setRzeczywista(float nowaRzeczywista)
+    {
+       this.rzeczywista1=nowaRzeczywista;
+    }
+
+    //metodę która zwróci sumę wszystkich pól liczbowych klasy
+    public float suma()
+    {
+        return this.calkowita1+this.calkowita2+this.rzeczywista1;
+    }
+
+    //metodę która zwróci wartość logiczną true - jeżeli obydwie liczby całkowite będą pierwsze, false= w przeciwnym razie
+    public boolean liczbyPierwsze(int a,int b)
+    {
+        //przypisujemy liczby na których będziemy pracować
+        this.calkowita1= a;
+        this.calkowita2 =b;
+        //zerujemy zmienne z iloscia dzielnikow
+        int licznikDzielnikow1=0;
+        int licznikDzielnikow2=0;
+        //sprawdzamy ile dzielnikow ma pierwsza liczba
+        for(int i=1;i<=this.calkowita1;i++)
+        {
+            if(this.calkowita1%i==0)
+            {
+                licznikDzielnikow1 = licznikDzielnikow1 +1;
+            }
+            else
+            {
+
+            }
+        }
+
+        //sprawdzamy ile dzielnikow ma druga liczba
+        for(int j=1;j<=this.calkowita2;j++)
+        {
+            if(this.calkowita2%j==0)
+            {
+                licznikDzielnikow2 = licznikDzielnikow2 +1;
+            }
+            else
+            {
+
+            }
+        }
+
+        //jeśli obie liczby mają tylko dwa dzielniki to są pierwsze i wtedy ustawiamy true, w przeciwnym wypadku false
+        if(licznikDzielnikow1==2&&licznikDzielnikow2==2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
 
 
-
-
-
+    }
 
 
 
