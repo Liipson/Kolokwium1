@@ -12,7 +12,26 @@ public class MyClass
     //1 pole przetrzymujące znak(dostępny tylko w tej klasie)
      private char znak1;
 
+     /*
+    3 publiczne konstruktory (domyślny, dwuparametrowy - ustawiający wartości typu całkowitego, trójparametrowy - ustawiający wartości
+    typu całkowitego i logiczne - do inicjalizacji części wartości w tym konsktruktorze wykorzystaj konstruktor dwuparametrowy)
+    */
+    public MyClass()
+    {
 
+    }
+
+    public MyClass(int a, int b)
+    {
+        this.calkowita1=a;
+        this.calkowita2=b;
+    }
+
+    public MyClass(int a,int b,boolean c)
+    {
+        this(a,b);
+        this.logiczna1=c;
+    }
 
 
 
