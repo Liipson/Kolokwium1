@@ -49,7 +49,7 @@ public class MyClass
     //metodę ustawiającą wartość pola rzeczywistego
     public void setRzeczywista(float nowaRzeczywista)
     {
-       this.rzeczywista1=nowaRzeczywista;
+        this.rzeczywista1=nowaRzeczywista;
     }
 
     //metodę która zwróci sumę wszystkich pól liczbowych klasy
@@ -61,7 +61,7 @@ public class MyClass
     //metodę która zwróci wartość logiczną true - jeżeli obydwie liczby całkowite będą pierwsze, false= w przeciwnym razie
     public boolean liczbyPierwsze(int a,int b)
     {
-        //przypisujemy liczby na których będziemy pracować
+        //przypisujemy liczby na których będziemy pracować (chociaż w poleceniu tego nie było ale zrobiłem to w ramach sprawdzenia czy dziala)
         this.calkowita1= a;
         this.calkowita2 =b;
         //zerujemy zmienne z iloscia dzielnikow
@@ -79,7 +79,6 @@ public class MyClass
 
             }
         }
-
         //sprawdzamy ile dzielnikow ma druga liczba
         for(int j=1;j<=this.calkowita2;j++)
         {
@@ -92,7 +91,6 @@ public class MyClass
 
             }
         }
-
         //jeśli obie liczby mają tylko dwa dzielniki to są pierwsze i wtedy ustawiamy true, w przeciwnym wypadku false
         if(licznikDzielnikow1==2&&licznikDzielnikow2==2)
         {
@@ -102,16 +100,94 @@ public class MyClass
         {
             return false;
         }
+    }
+
+    //metodę która zwróci informacje ile liczb w klasie jest ujemnych
+    public int ujemne()
+    {
+        int licznikUjemnych=0;
+        if(this.calkowita1<0)
+        {
+            licznikUjemnych++;
+        }
+        if(this.calkowita2<0)
+        {
+            licznikUjemnych++;
+        }
+        if(this.rzeczywista1<0)
+        {
+            licznikUjemnych++;
+        }
+
+        return licznikUjemnych;
+    }
+
+    /* metodę która jako parametr pobiera wartość logiczną i liczbe rzeczywistą. Jeżeli wartość logiczna przekazana jako parametr jest równa false -
+    wartość pola klasy zostanie ustawiona na wartość parametru  jeżeli jest ujemny.
+    Jeżeli wartość logiczna jest równa true wartośc pola klasy zostanie ustawiona na wartość parametru metody jeżeli jest dodatnia.
+    Jeżeli przekazana jako parametr wartość rzeczywista jest równa 0, to ustawiamy taką wartość pola klasy bez względu na wartość parametru logicznego metody.
+     */
+    public void coToJest(boolean wartoscL, float wartoscR)
+    {
+        if (wartoscR == 0)
+        {
+            this.rzeczywista1=wartoscR;
+        }
+        else
+        {
+            if (wartoscL == false&&wartoscR<0)
+            {
+                    this.rzeczywista1 = wartoscR;
+            }
+            else if (wartoscL == true&& wartoscR>0)
+            {
+                    this.rzeczywista1 = wartoscR;
+            }
+        }
+    }
+
+    //metodę która ma za zadanie wyświetlić tyle razy słowo "Hello world" jaką wartość ma parametr metody - za pommocą pętli while
+        public void helloWhile(int x)
+        {
+            while(x>0)
+            {
+                System.out.println("Hello world");
+                x--;
+            }
+        }
 
 
+    //metodę która ma za zadanie wyświetlić tyle razy słowo "Hello world" jaką wartość ma parametr metody - za pomocą petli for
+    public void helloFor(int y)
+    {
+        for(int i=0;i<y;i++)
+        {
+            System.out.println("Hello World");
+        }
+    }
 
+    //metodę która ma za zadanie wyświetlić wszystkie liczby do zadanej parametrem o ile nie jest to liczba parzysta
+    public void wszystkieLiczby(int z)
+    {
+        for(int i=0;i<z;i++)
+        {
+               if(i%2==0)
+               {
+
+               }
+               else
+               {
+                   System.out.println(i);
+               }
+        }
     }
 
 
-
-
-
-
+    //metodę która ma za zadanie wyświetlić wszystkie liczby z zakresu zadanego parametrami metody, o ile nie jest to liczba pierwsza
+    public void niePierwsza(int odtad,int dotad)
+    {
+      //to be continue
+    }
 
 
 
