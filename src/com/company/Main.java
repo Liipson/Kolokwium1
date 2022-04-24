@@ -10,5 +10,7 @@ public class Main {
         System.out.println(obiekt.liczbyPierwsze(3,7));
 
 
+        obiekt.niePierwsza(1,10);
+
     }
 }

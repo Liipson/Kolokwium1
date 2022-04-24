@@ -72,7 +72,7 @@ public class MyClass
         {
             if(this.calkowita1%i==0)
             {
-                licznikDzielnikow1 = licznikDzielnikow1 +1;
+                licznikDzielnikow1++;
             }
             else
             {
@@ -84,7 +84,7 @@ public class MyClass
         {
             if(this.calkowita2%j==0)
             {
-                licznikDzielnikow2 = licznikDzielnikow2 +1;
+                licznikDzielnikow2++;
             }
             else
             {
@@ -186,7 +186,31 @@ public class MyClass
     //metodę która ma za zadanie wyświetlić wszystkie liczby z zakresu zadanego parametrami metody, o ile nie jest to liczba pierwsza
     public void niePierwsza(int odtad,int dotad)
     {
-      //to be continue
+      int licznik2=0;
+      for(int i=odtad; i<=dotad;i++)
+      {
+          licznik2=0;
+                 for(int j=1;j<=dotad;j++)
+                    {
+                        if(i%j==0)
+                        {
+                            licznik2++;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+
+            if(licznik2!=2)
+            {
+                System.out.println(i);
+            }
+            else
+            {
+
+            }
+      }
     }
 
 
